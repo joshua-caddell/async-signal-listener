@@ -1,0 +1,9 @@
+[package]
+name = "tokio-spi-rx"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio-signal = { path = "../tokio-signal" }
+signal-sample = { path = "../signal-sample"}
+tokio = "1.53.2"

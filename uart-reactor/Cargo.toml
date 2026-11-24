@@ -1,0 +1,10 @@
+[package]
+name = "uart-reactor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+mio-serial = "5.0.7"
+mio = "1.2.4"
+signal-sample = { path = "../signal-sample"}
+

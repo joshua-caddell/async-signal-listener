@@ -1,0 +1,34 @@
+[package]
+name = "tokio-gpiod"
+description = "Linux GPIO character device interfacing with tokio"
+version.workspace = true
+authors.workspace = true
+license.workspace = true
+edition.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "README.md"
+categories = ["os", "os::linux-apis", "asynchronous"]
+keywords = ["libgpiod", "GPIO", "Linux", "async", "tokio"]
+
+[dependencies]
+libc.workspace = true
+
+[dependencies.gpiod-core]
+workspace = true
+default-features = false
+
+[dependencies.tokio]
+workspace = true
+default-features = false
+features = ["fs", "io-util", "rt", "net"]
+
+[dev-dependencies.tokio]
+workspace = true
+features = ["macros", "rt-multi-thread"]
+
+[features]
+default = ["v2"]
+v2 = ["gpiod-core/v2"]
+clap = ["gpiod-core/clap"]
+serde = ["gpiod-core/serde"]
